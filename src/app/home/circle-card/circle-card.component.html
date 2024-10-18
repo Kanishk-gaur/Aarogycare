@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-2">The Simplest Process in Finding Healthcare Abroad</h1>
+  <h2 class="text-center mb-4">We'll Help You Map Out Your Medical Tourism Journey</h2>
+
+  <div class="process-steps" [@staggerAnimation]="steps.length">
+    <div *ngFor="let step of steps" class="step">
+      <div class="icon-container">
+        <img [src]="step.icon" alt="{{ step.title }}" width="60" height="60">
+      </div>
+      <h3>{{ step.title }}</h3>
+      <p>{{ step.description }}</p>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary btn-lg">Explore Our Services →</button>
+  </div>
+</div>

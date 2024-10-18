@@ -1,0 +1,39 @@
+<div class="carousel-container">
+  <div class="navigation-panel left-panel">
+    <button class="navigation-button" 
+            [class.disabled]="!canGoPrevious()"
+            (click)="previous()"
+            [disabled]="!canGoPrevious()">
+      <span [innerHTML]="leftArrowSvg"></span>
+    </button>
+  </div>
+
+  <div class="hospital-carousel">
+    <div class="row flex-nowrap g-4">
+      <div *ngFor="let hospital of visibleHospitals; let i = index" 
+           class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="hospital-card" 
+             [ngClass]="{'hovered': hoveredIndex === i, 'not-hovered': hoveredIndex !== null && hoveredIndex !== i}"
+             (mouseenter)="setHoveredIndex(i)"
+             (mouseleave)="setHoveredIndex(null)">
+          <div class="image-container">
+            <img [src]="hospital.imageUrl" [alt]="hospital.name" class="img-fluid">
+          </div>
+          <div class="hospital-info">
+            <h2>{{hospital.name}}</h2>
+            <p>{{hospital.location}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navigation-panel right-panel">
+    <button class="navigation-button"
+            [class.disabled]="!canGoNext()"
+            (click)="next()"
+            [disabled]="!canGoNext()">
+      <span [innerHTML]="rightArrowSvg"></span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.hospital-carousel {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.navigation-panel {
+  padding: 0 10px;
+}
+
+.navigation-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.hospital-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+
+  &.hovered {
+    transform: translateZ(20px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+
+  &.not-hovered {
+    transform: translateZ(-10px) scale(0.95);
+    opacity: 0.75;
+    filter: blur(1px);
+  }
+
+  .image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .hospital-info {
+    padding: 16px;
+    text-align: center;
+
+    h2 {
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #666;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hospital-carousel {
+    .row {
+      flex-wrap: nowrap;
+    }
+  }
+}

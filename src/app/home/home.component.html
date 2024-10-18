@@ -1,0 +1,8 @@
+<!-- home.component.html -->
+<div class="content-wrapper" [class.blur]="showCircleCard">
+    <app-home-card></app-home-card>
+    <app-hospital-card></app-hospital-card>
+    <div #trigger class="scroll-trigger"></div>
+  </div>
+  <div *ngIf="isLoading" class="loading-indicator">Loading...</div>
+  <ng-container #circleCardContainer></ng-container>

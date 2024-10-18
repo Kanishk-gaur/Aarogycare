@@ -1,0 +1,118 @@
+/* circle-card.component.scss */
+// :host {
+//   display: block;
+//   padding: 2rem 0;
+//   position: relative;
+//   background-color: #ffffff; /* Optional, keeps the white background */
+// }
+
+// :host::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-image: url('../../../assets/tour_1.jpeg');
+//   background-size: cover;
+//   background-position: center;
+//   opacity: 0.5; /* Background image opacity */
+//   z-index: -1; /* Ensure the background is behind the content */
+// }
+:host {
+  display: block;
+  padding: 2rem 0;
+  background-color: rgba(248, 242, 227, 0.8); /* White background with 0.5 opacity */
+  background-image: url('../../../assets/bg_circle_card.jpg');
+  background-blend-mode: lighten; /* Blend the image with the background color */
+  background-size: cover;
+  background-position: center;
+}
+
+
+  
+  h1 {
+    color: #00B8A9;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  h2 {
+    color: #666;
+    font-size: 1.25rem;
+    
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .step {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 1rem;
+  
+    @media (max-width: 768px) {
+      flex-basis: 50%;
+    }
+  
+    @media (max-width: 480px) {
+      flex-basis: 100%;
+    }
+  }
+  
+  .icon-container {
+    width: 120px;
+    height: 120px;
+    background-color: #81c3c182;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    
+    i {
+      font-size: 1.5rem;
+      color: #666;
+    }
+  }
+  
+  h3 {
+    color: #08766d;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: #666;
+    font-weight: 500;
+    font-size: 1.0rem;
+  }
+  
+  .btn-primary {
+    background-color: #00B8A9;
+    border-color: #18ccbd;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+    &:hover {
+      background-color: #2ae1d2;
+      border-color: #03988c;
+      color: #666;
+    }
+  }
+  

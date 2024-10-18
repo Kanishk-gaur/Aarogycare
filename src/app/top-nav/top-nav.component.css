@@ -1,0 +1,46 @@
+/* top-nav.component.css */
+.navbar {
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* To ensure it stays above other elements */
+  background-color: #fff; /* Ensure a background color */
+}
+
+  
+  .navbar-brand {
+    font-size: 24px;
+  }
+  
+  .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    color: #28a745 !important;
+  }
+  
+  .nav-link.active {
+    color: #28a745 !important;
+    font-weight: 600;
+  }
+  
+  .bg-image {
+    height: 300px;
+    background-image: url('/assets/tour_2.jpeg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 76px;
+  }
+  
+  @media (max-width: 991.98px) {
+    .nav-link {
+      margin-left: 0;
+      padding: 10px 0;
+    }
+  }

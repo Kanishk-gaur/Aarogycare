@@ -1,0 +1,153 @@
+// about.component.scss
+
+// Variables
+$primary-color: #639618;
+$text-color: #4a4a4a;
+$white: #fff;
+$max-width: 1200px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-padding {
+  padding: clamp(20px, 5vw, 40px);
+}
+
+// Styles
+.about-container {
+  background-size: cover;
+  background-position: center;
+  @include responsive-padding;
+  font-weight: 500;
+  color: $text-color;
+
+  .content {
+    max-width: min($max-width, 90%);
+    margin: 0 auto;
+    background-color: rgba($white, 0.9);
+    padding: clamp(15px, 3vw, 30px);
+    border-radius: 5px;
+
+    h2 {
+      color: $text-color;
+      font-size: clamp(20px, 4vw, 24px);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: clamp(14px, 2vw, 16px);
+      line-height: 1.6;
+    }
+  }
+}
+
+.footer {
+  background-color: $primary-color;
+  color: $white;
+  @include responsive-padding;
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  &-left {
+    flex: 2 1 300px;
+    padding-right: clamp(20px, 4vw, 40px);
+    margin-bottom: 20px;
+  }
+
+  &-right {
+    flex: 1 1 200px;
+  }
+
+  h3 {
+    font-size: clamp(18px, 3vw, 20px);
+    margin-bottom: 15px;
+  }
+
+  .contact-us {
+    display: inline-block;
+    color: $white;
+    text-decoration: none;
+    border: 1px solid $white;
+    padding: 5px 10px;
+    margin-top: 15px;
+    font-size: clamp(12px, 2vw, 14px);
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: $white;
+      color: $primary-color;
+    }
+  }
+
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    div {
+      flex: 1 1 100px;
+      margin-right: 20px;
+    }
+
+    a {
+      display: block;
+      color: $white;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-weight: 800;
+      font-size: clamp(14px, 2vw, 16px);
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid rgba($white, 0.3);
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 14px);
+    font-weight: 700;
+
+    p {
+      display: inline-block;
+      margin: 5px 10px;
+    }
+  }
+}
+
+#brand {
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 28px);
+  color: $primary-color;
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .footer {
+    &-content {
+      flex-direction: column;
+    }
+
+    &-left, &-right {
+      flex: 1 1 100%;
+      padding-right: 0;
+    }
+
+    &-links {
+      margin-top: 20px;
+    }
+  }
+}
