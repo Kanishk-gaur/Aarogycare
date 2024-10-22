@@ -13,6 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ServicesComponent } from './services/services.component';
+import { ServiceCardComponent } from './services/service-card/service-card.component';
+import { AyurvedaComponent } from './ayurveda/ayurveda.component';
+import { AyurComponent } from './services/ayur/ayur.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     HospitalCardComponent,
     CircleCardComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ServicesComponent,
+    ServiceCardComponent,
+    AyurvedaComponent,
+    AyurComponent
   ],
   imports: [
     BrowserModule,

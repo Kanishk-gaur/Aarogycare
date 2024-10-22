@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ServicesComponent } from './services/services.component';
+import { AyurvedaComponent } from './ayurveda/ayurveda.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'projects', component: HomeComponent },
-  { path: 'services', component: HomeComponent },
+  { path: 'projects', component: AyurvedaComponent },
+  { path: 'services', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: HomeComponent },
   { path: 'contact', component: ContactComponent },

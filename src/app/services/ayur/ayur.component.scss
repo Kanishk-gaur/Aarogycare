@@ -1,0 +1,66 @@
+// Variables for easier customization and reusability
+$primary-color: #00B8A9;
+$text-color: #555;
+$card-padding: 15px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$transition-speed: 0.3s;
+$border-radius: 8px;
+$hover-translate: -5px;
+
+@mixin responsive-card-img($height-desktop, $height-mobile) {
+  height: $height-desktop;
+  object-fit: cover;
+  border-radius: $border-radius $border-radius 0 0;
+
+  @media (max-width: 767px) {
+    height: $height-mobile;
+  }
+}
+
+// Card styles
+.card {
+  border: none;
+  transition: transform $transition-speed ease-in-out;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    transform: translateY($hover-translate);
+  }
+
+  .card-img-top {
+    @include responsive-card-img(200px, 150px);
+  }
+
+  .card-body {
+    padding: $card-padding;
+    flex-grow: 1;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    color: $text-color;
+    font-weight: 700;
+  }
+
+  .card-footer {
+    background-color: white;
+    border-top: none;
+    text-align: center;
+    padding: $card-padding;
+
+    // Optionally add some responsive footer styling
+    @media (max-width: 767px) {
+      padding: 10px;
+    }
+  }
+}

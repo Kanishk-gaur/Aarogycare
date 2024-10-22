@@ -23,11 +23,11 @@ export class CircleCardComponent implements OnInit {
   @HostBinding('class.show') show = false;
 
   steps = [
-    { icon: '/assets/icons/organ/brain_2.png', title: 'Brain', description: 'Find and research top hospitals & destinations' },
-    { icon: '/assets/icons/organ/heart_2.png', title: 'Heart', description: 'Request a quote directly through our website' },
-    { icon: '/assets/icons/organ/kidney_2.png', title: 'Kidney', description: 'Based on your criteria, we recommend the best hospitals or providers' },
-    { icon: '/assets/icons/organ/liver_2.png', title: 'Liver', description: 'The hospital/provider will contact you directly to coordinate your treatment' },
-    { icon: '/assets/icons/organ/joints_2.png', title: 'Joints', description: 'Finalize your treatment with the hospital/provider of your choice' },
+    { icon: '/assets/icons/checkup.png', title: 'Checkups', description: 'Find and research top hospitals & destinations' },
+    { icon: '/assets/icons/surgery.png', title: 'Surgery', description: 'Request a quote directly through our website' },
+    { icon: '/assets/icons/transplant.png', title: 'Transplant', description: 'Based on your criteria, we recommend the best hospitals or providers' },
+    { icon: '/assets/icons/cancer.png', title: 'Cancer Treatement', description: 'The hospital/provider will contact you directly to coordinate your treatment' },
+    { icon: '/assets/icons/dentist.png', title: 'Dental Care', description: 'Finalize your treatment with the hospital/provider of your choice' },
   ];
   constructor() {}
 
