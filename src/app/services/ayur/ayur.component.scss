@@ -7,13 +7,13 @@ $transition-speed: 0.3s;
 $border-radius: 8px;
 $hover-translate: -5px;
 
-@mixin responsive-card-img($height-desktop, $height-mobile) {
-  height: $height-desktop;
+@mixin responsive-card-img($height_desktop, $height_mobile) {
+  height: $height_desktop;
   object-fit: cover;
   border-radius: $border-radius $border-radius 0 0;
 
   @media (max-width: 767px) {
-    height: $height-mobile;
+    height: $height_mobile;
   }
 }
 
@@ -52,13 +52,21 @@ $hover-translate: -5px;
     font-weight: 700;
   }
 
+  .service-card-body {
+    background-image: url('../../../assets/ayur_img/bg1.png'); // Change to your background image path
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: white;
+  }
+
   .card-footer {
     background-color: white;
     border-top: none;
     text-align: center;
     padding: $card-padding;
 
-    // Optionally add some responsive footer styling
     @media (max-width: 767px) {
       padding: 10px;
     }

@@ -1,15 +1,11 @@
 <div class="row">
-    <div class="col-md-4 mb-4" *ngFor="let service of services">
-      <div class="card h-100 service-card">
-        <img [src]="service.imageUrl" class="card-img-top" alt="{{ service.title }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ service.title }}</h5>
-          <p class="card-text">{{ service.description }}</p>
-        </div>
-        <div class="card-footer">
-          <!-- <small class="text-muted">Starting at {{ service.price }}</small> -->
-        </div>
+  <div class="col-md-4 mb-4" *ngFor="let service of services">
+    <div class="card h-100 service-card">
+      <img [src]="service.imageUrl" class="card-img-top" alt="{{ service.title }}">
+      <div class="card-body" [ngStyle]="{'background-image': 'url(' + service.backgroundUrl + ')'}">
+        <h5 class="card-title">{{ service.title }}</h5>
+        <p class="card-text">{{ service.description }}</p>
       </div>
     </div>
   </div>
-  
+</div>

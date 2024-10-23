@@ -6,6 +6,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { AyurvedaComponent } from './ayurveda/ayurveda.component';
+import { AyurComponent } from './services/ayur/ayur.component';
+import { ServiceCardComponent } from './services/service-card/service-card.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'ayur', component: AyurComponent },
+  { path: 'service-card', component: ServiceCardComponent },
   
   // Default route
   { path: '', redirectTo: 'home', pathMatch: 'full' },
