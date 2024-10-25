@@ -10,19 +10,19 @@ export class ServiceCardComponent {
     {
       title: 'Cosmetic Surgery',
       description: 'Enhance your appearance with expert cosmetic surgery.',
-      imageUrl: 'https://example.com/images/cosmetic-surgery.jpg',
+      imageUrl: 'assets/moder_ser/cosm.jpeg',
       price: '$2,500'
     },
     {
       title: 'Heart Transplant',
       description: 'Life-saving heart transplant with world-class care.',
-      imageUrl: 'https://example.com/images/heart-transplant.jpg',
+      imageUrl: 'assets/moder_ser/heart.jpeg',
       price: '$150,000'
     },
     {
       title: 'Dental Implants',
       description: 'Get the perfect smile with our advanced dental implants.',
-      imageUrl: 'https://example.com/images/dental-implants.jpg',
+      imageUrl: 'assets/moder_ser/dent.jpeg',
       price: '$1,200'
     },
     {

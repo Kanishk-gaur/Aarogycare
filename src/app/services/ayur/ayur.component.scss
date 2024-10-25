@@ -7,6 +7,16 @@ $transition-speed: 0.3s;
 $border-radius: 8px;
 $hover-translate: -5px;
 
+// Add the rotation animation
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @mixin responsive-card-img($height_desktop, $height_mobile) {
   height: $height_desktop;
   object-fit: cover;
@@ -37,6 +47,31 @@ $hover-translate: -5px;
   .card-body {
     padding: $card-padding;
     flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: rotate360 10s linear infinite;
+      transform-origin: center center;
+      z-index: -1;
+    }
+
+    // Ensure text stays above rotating background
+    h5.card-title, 
+    p.card-text {
+      position: relative;
+      z-index: 1;
+    }
   }
 
   .card-title {
@@ -53,7 +88,7 @@ $hover-translate: -5px;
   }
 
   .service-card-body {
-    background-image: url('../../../assets/ayur_img/bg1.png'); // Change to your background image path
+    background-image: url('../../../assets/ayur_img/bg2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,4 +106,9 @@ $hover-translate: -5px;
       padding: 10px;
     }
   }
+}
+
+// Optional: Add hover pause effect
+.card-body:hover::before {
+  animation-play-state: paused;
 }

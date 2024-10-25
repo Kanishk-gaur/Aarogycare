@@ -29,7 +29,7 @@ export class AyurComponent {
       backgroundUrl: 'assets/ayur_img/bg4.png',
       price: '$3,000'
     },
-    {
+    { 
       title: 'Udvarthanam',
       description: 'A dry powder massage using herbal powders to exfoliate the skin, improve circulation, and reduce fat accumulation. ',
       imageUrl: 'assets/ayur_img/Udvarth.jpg',
