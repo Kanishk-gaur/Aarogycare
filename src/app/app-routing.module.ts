@@ -11,10 +11,10 @@ import { ServiceCardComponent } from './services/service-card/service-card.compo
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'projects', component: AyurvedaComponent },
+  // { path: 'projects', component: AyurvedaComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'blog', component: HomeComponent },
+  // { path: 'blog', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'ayur', component: AyurComponent },
   { path: 'service-card', component: ServiceCardComponent },

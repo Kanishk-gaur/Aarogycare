@@ -1,0 +1,47 @@
+{
+    "COMMON": {
+      "STARTING_AT": "Desde"
+    },
+    "SERVICES": {
+      "COSMETIC_SURGERY": {
+        "TITLE": "Cirugía Cosmética",
+        "DESCRIPTION": "Mejore su apariencia con cirugía cosmética experta."
+      },
+      "HEART_TRANSPLANT": {
+        "TITLE": "Trasplante de Corazón",
+        "DESCRIPTION": "Trasplante de corazón que salva vidas con atención de clase mundial."
+      },
+      "DENTAL_IMPLANTS": {
+        "TITLE": "Implantes Dentales",
+        "DESCRIPTION": "Obtenga la sonrisa perfecta con nuestros implantes dentales avanzados."
+      },
+      "HAIR_TRANSPLANT": {
+        "TITLE": "Trasplante de Cabello",
+        "DESCRIPTION": "Restaure su línea de cabello con trasplantes de aspecto natural."
+      },
+      "KNEE_REPLACEMENT": {
+        "TITLE": "Reemplazo de Rodilla",
+        "DESCRIPTION": "Recupere la movilidad con nuestras cirugías efectivas de reemplazo de rodilla."
+      },
+      "EYE_SURGERY": {
+        "TITLE": "Cirugía Ocular (LASIK)",
+        "DESCRIPTION": "Obtenga una visión cristalina con nuestros procedimientos LASIK avanzados."
+      },
+      "LIVER_TRANSPLANT": {
+        "TITLE": "Trasplante de Hígado",
+        "DESCRIPTION": "Servicios de trasplante de hígado de clase mundial con tiempo mínimo de recuperación."
+      },
+      "BREAST_AUGMENTATION": {
+        "TITLE": "Aumento de Senos",
+        "DESCRIPTION": "Logre el aspecto deseado con cirugía de aumento de senos."
+      },
+      "SPINAL_SURGERY": {
+        "TITLE": "Cirugía de Columna",
+        "DESCRIPTION": "Obtenga alivio del dolor crónico de espalda con cirugía espinal experta."
+      },
+      "FERTILITY_TREATMENT": {
+        "TITLE": "Tratamiento de Fertilidad (FIV)",
+        "DESCRIPTION": "Logre la paternidad con nuestros tratamientos avanzados de fertilidad."
+      }
+    }
+  }

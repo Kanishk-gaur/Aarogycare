@@ -1,31 +1,4 @@
-// import { Component, OnInit } from '@angular/core';
-// import { CommonModule } from '@angular/common';
 
-// interface Hospital {
-//   id: number;
-//   name: string;
-//   location: string;
-//   imageUrl: string;
-// }
-
-// @Component({
-//   selector: 'app-hospital-card',
-//   templateUrl: './hospital-card.component.html',
-//   styleUrls: ['./hospital-card.component.scss']
-// })
-// export class HospitalCardComponent implements OnInit {
-
-
-//   currentIndex = 0;
-//   itemsPerPage = 4;
-//   hoveredIndex: number | null = null;
-
-//   ngOnInit() {
-//     this.updateItemsPerPage();
-//     window.addEventListener('resize', () => this.updateItemsPerPage());
-//   }
-
-// }
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 

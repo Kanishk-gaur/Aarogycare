@@ -13,10 +13,10 @@ declare var bootstrap: any; // Declare bootstrap as any type
 export class TopNavComponent implements OnInit {
   navItems = [
     { path: 'home', label: 'Home' },
-    { path: 'projects', label: 'Projects' },
+    // { path: 'projects', label: 'Projects' },
     { path: 'services', label: 'Services' },
     { path: 'about', label: 'About' },
-    { path: 'blog', label: 'Blog' },
+    // { path: 'blog', label: 'Blog' },
     { path: 'contact', label: 'Contact' }
   ];
 

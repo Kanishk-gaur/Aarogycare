@@ -1,34 +1,80 @@
+.headi{
+  // margin-left: 20px;
+  align-items: center;
+
+}
+.headin{
+  padding-left: 40px;
+
+}
 .carousel-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  padding: 0 20px;
 }
 
+.section-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.highlight {
+  color: #00B8A9;
+}
 .hospital-carousel {
   flex-grow: 1;
   overflow-x: hidden;
+  margin: 0 15px;
 }
 
 .navigation-panel {
-  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
 }
 
-.navigation-button {
-  background: none;
-  border: none;
+.btn-nav {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  
-  &.disabled {
+  transition: all 0.3s ease;
+  padding: 0;
+
+  &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
-}
 
-.nav-icon {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
+  &:not(:disabled):hover {
+    background-color: #f5f5f5;
+    border-color: #d0d0d0;
+  }
+
+  .arrow {
+    border: solid #666;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    
+    &.left {
+      transform: rotate(135deg);
+    }
+    
+    &.right {
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .hospital-card {
@@ -78,6 +124,7 @@
     p {
       color: #666;
       font-size: 16px;
+      margin: 0;
     }
   }
 }
