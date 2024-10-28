@@ -1,21 +1,35 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-6 text-center">
-        <h2>Modern Medicine</h2>
-        <img src="assets/service_1.png" 
-             alt="Left Image" 
-             class="img-fluid" 
-             (click)="openLeftComponent()" 
-             style="cursor: pointer;">
+<div class="medicine-selection">
+  <div class="selection-container">
+    <!-- Modern Medicine Card -->
+    <div class="medicine-card modern-medicine" (click)="openLeftComponent()">
+      <div class="card-content">
+        <div class="image-wrapper">
+          <img src="assets/service_1.png" alt="Modern Medicine" class="card-image">
+          <div class="overlay">
+            <div class="overlay-content">
+              <h2 class="card-title">Modern Medicine</h2>
+              <p class="card-description">Explore contemporary medical solutions and treatments</p>
+              <span class="explore-btn">Learn More</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 text-center">
-        <h2>AyurvediC Medicine</h2>
-        <img src="assets/ayur_img/bg3.png" 
-             alt="Right Image" 
-             class="img-fluid" 
-             (click)="openRightComponent()" 
-             style="cursor: pointer;">
+    </div>
+
+    <!-- Ayurvedic Medicine Card -->
+    <div class="medicine-card ayurvedic-medicine" (click)="openRightComponent()">
+      <div class="card-content">
+        <div class="image-wrapper">
+          <img src="assets/ayur_img/bg3.png" alt="Ayurvedic Medicine" class="card-image">
+          <div class="overlay">
+            <div class="overlay-content">
+              <h2 class="card-title">Ayurvedic Medicine</h2>
+              <p class="card-description">Discover traditional healing wisdom</p>
+              <span class="explore-btn">Learn More</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  
+</div>

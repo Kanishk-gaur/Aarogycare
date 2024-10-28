@@ -1,0 +1,183 @@
+// Variables
+$transition-duration: 0.3s;
+$overlay-color: rgba(0, 0, 0, 0.4);
+$card-blur: 10px;
+
+// Base styles
+.services-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+// Loading overlay
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+// Video background
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity $transition-duration ease;
+
+  &.loaded {
+    opacity: 1;
+  }
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.4)
+    );
+  }
+}
+
+// Main content
+.main-content {
+  opacity: 0;
+  transition: opacity $transition-duration ease;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+// Selection container
+.selection-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+// Card styles
+.medicine-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur($card-blur);
+  -webkit-backdrop-filter: blur($card-blur);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all $transition-duration ease;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+    .card-image {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+      opacity: 1;
+    }
+  }
+}
+
+// Animations
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Fade animations
+.fade-out {
+  opacity: 0;
+  transition: opacity $transition-duration ease;
+}
+
+// Error message
+.error-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  
+  .retry-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color $transition-duration ease;
+    
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .video-background {
+    video {
+      // Optional: show static image on mobile
+      // display: none;
+    }
+  }
+}
