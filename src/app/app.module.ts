@@ -20,7 +20,8 @@ import { AyurComponent } from './services/ayur/ayur.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
+import { BgVideoComponent } from './home/bg-video/bg-video.component';
+import { Display1Component } from './about/display-1/display-1.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -39,7 +40,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ServicesComponent,
     ServiceCardComponent,
     AyurvedaComponent,
-    AyurComponent
+    AyurComponent,
+    BgVideoComponent,
+    Display1Component
   ],
   imports: [
     BrowserModule,

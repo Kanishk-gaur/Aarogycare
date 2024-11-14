@@ -1,35 +1,43 @@
 <div class="medicine-selection">
   <div class="selection-container">
     <!-- Modern Medicine Card -->
-    <div class="medicine-card modern-medicine" (click)="openLeftComponent()">
-      <div class="card-content">
-        <div class="image-wrapper">
-          <img src="assets/service_1.png" alt="Modern Medicine" class="card-image">
-          <div class="overlay">
-            <div class="overlay-content">
-              <h2 class="card-title">Modern Medicine</h2>
-              <p class="card-description">Explore contemporary medical solutions and treatments</p>
-              <span class="explore-btn">Learn More</span>
-            </div>
-          </div>
-        </div>
+    <div class="card-hover">
+      <div class="card-hover__content">
+        <h3 class="card-hover__title">
+          Make your <span>choice</span> right now!
+        </h3>
+        <p class="card-hover__text">Discover India's best services in Modern Medicine.</p>
+        <a routerLink="/service-card" class="card-hover__link">
+          <span>Explore</span>
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>        
+        </a>
       </div>
+      <div class="card-hover__extra">
+        <h4>For <span>more</span> detials <span>contact us</span>and stay safe </h4>
+      </div>
+      <img src="./../../assets/service_img/alo.png" alt="Modern Medicine">
     </div>
 
     <!-- Ayurvedic Medicine Card -->
-    <div class="medicine-card ayurvedic-medicine" (click)="openRightComponent()">
-      <div class="card-content">
-        <div class="image-wrapper">
-          <img src="assets/ayur_img/bg3.png" alt="Ayurvedic Medicine" class="card-image">
-          <div class="overlay">
-            <div class="overlay-content">
-              <h2 class="card-title">Ayurvedic Medicine</h2>
-              <p class="card-description">Discover traditional healing wisdom</p>
-              <span class="explore-btn">Learn More</span>
-            </div>
-          </div>
-        </div>
+    <!-- <div class="card-hover">
+      <div class="card-hover__content">
+        <h3 class="card-hover__title">
+          Make your <span>choice</span> right now!
+        </h3>
+        <p class="card-hover__text">Ayurveda has always been a major path to health and a way to stay connected to nature in India, which is why you'll find natural cures here through Ayurveda.</p>
+        <a routerLink="/ayur" class="card-hover__link">
+          <span>Explore</span>
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>        
+        </a>
       </div>
-    </div>
+      <div class="card-hover__extra">
+        <h4>For <span>more</span> detials <span>contact us</span>and stay safe </h4>
+      </div>
+      <img src="./../../assets/service_img/ayur.jpg" alt="Ayurvedic Medicine">
+    </div> -->
   </div>
 </div>

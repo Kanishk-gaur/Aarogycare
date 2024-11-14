@@ -1,3 +1,81 @@
+.hero-section {
+  height: 30vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('./../../../assets/home_p/doc1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+   margin-bottom: 50px; 
+}
+
+.hero-content {
+  padding: 20px;
+  max-width: 800px;
+}
+
+.hello-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cta-button {
+  background-color: #00ff91;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: darken(#118625, 10%);
+  }
+}
+
+
+.head-text {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: #00B8A9;
+    }
+  }
+}
+
 // Variables for easier customization and reusability
 $primary-color: #00B8A9;
 $text-color: #555;

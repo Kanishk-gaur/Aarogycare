@@ -16,8 +16,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
   isLoading = false;
   private scrollSubject = new BehaviorSubject<number>(0);
   private circleCardComponentRef: ComponentRef<any> | null = null;
+  viewHeight: string = '100vh';
 
-  constructor() {}
+  constructor() {
+    // Initial viewport height calculation
+    this.calculateViewHeight();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.calculateViewHeight();
+  }
+
+  private calculateViewHeight() {
+    // Handle mobile viewport height issues
+    this.viewHeight = `${window.innerHeight}px`;
+  }
 
   ngOnInit() {
     this.setupScrollListener();
@@ -25,49 +39,59 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log('Trigger element:', this.triggerElement);
+    // Initial check for elements in viewport
+    this.checkElementsInView();
   }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    const scrollPosition = window.pageYOffset;
-    console.log('Scroll position:', scrollPosition);
+    const scrollPosition = window.scrollY || window.pageYOffset;
     this.scrollSubject.next(scrollPosition);
+    this.checkElementsInView();
+  }
+
+  private checkElementsInView() {
+    if (this.triggerElement) {
+      const rect = this.triggerElement.nativeElement.getBoundingClientRect();
+      const triggerVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+      
+      if (triggerVisible && !this.showCircleCard && !this.isLoading) {
+        console.log('Trigger element in view');
+        this.isLoading = true;
+        this.loadCircleCardComponent();
+      } else if (!triggerVisible && this.showCircleCard) {
+        console.log('Trigger element out of view');
+        this.showCircleCard = false;
+        this.unloadCircleCardComponent();
+      }
+    }
   }
 
   setupScrollListener() {
     this.scrollSubject.pipe(
       debounceTime(100),
       distinctUntilChanged()
-    ).subscribe((scrollPosition) => {
-      if (this.triggerElement) {
-        const triggerPosition = this.triggerElement.nativeElement.offsetTop;
-        console.log('Trigger position:', triggerPosition);
-        
-        if (scrollPosition >= triggerPosition && !this.showCircleCard && !this.isLoading) {
-          console.log('Starting loading');
-          this.isLoading = true;
-          this.loadCircleCardComponent();
-        } else if (scrollPosition < triggerPosition && this.showCircleCard) {
-          console.log('Hiding circle card');
-          this.showCircleCard = false;
-          this.unloadCircleCardComponent();
-        }
-      } else {
-        console.log('Trigger element not found');
-      }
+    ).subscribe(() => {
+      this.checkElementsInView();
     });
   }
 
   async loadCircleCardComponent() {
     if (!this.circleCardComponentRef) {
-      const { CircleCardComponent } = await import('./circle-card/circle-card.component');
-      this.circleCardComponentRef = this.circleCardContainer.createComponent(CircleCardComponent);
+      try {
+        const { CircleCardComponent } = await import('./circle-card/circle-card.component');
+        this.circleCardComponentRef = this.circleCardContainer.createComponent(CircleCardComponent);
+        
+        setTimeout(() => {
+          console.log('Showing circle card');
+          this.showCircleCard = true;
+          this.isLoading = false;
+        }, 1000);
+      } catch (error) {
+        console.error('Error loading circle card component:', error);
+        this.isLoading = false;
+      }
     }
-    setTimeout(() => {
-      console.log('Showing circle card');
-      this.showCircleCard = true;
-      this.isLoading = false;
-    }, 2000);
   }
 
   unloadCircleCardComponent() {

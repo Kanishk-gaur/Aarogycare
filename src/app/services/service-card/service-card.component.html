@@ -1,13 +1,29 @@
-<div class="row">
-  <div class="col-md-4 mb-4" *ngFor="let service of services">
-    <div class="card h-100 service-card">
-      <img [src]="service.imageUrl" class="card-img-top" alt="{{ service.title }}">
-      <div class="card-body">
-        <h5 class="card-title">{{ service.title }}</h5>
-        <p class="card-text">{{ service.description }}</p>
-      </div>
-      <div class="card-footer">
-        <!-- <small class="text-muted">Starting at {{ service.price }}</small> -->
+<!-- landing-page.component.html -->
+<div class="hero-section">
+  <div class="hero-content">
+    <p class="hello-text">Hello Everyone</p>
+    <h1 class="main-title">
+      YES, WE CARE AND DARE TO PROVIDE ALL.
+    </h1>
+    <a routerLink="/contact"><button class="cta-button">CONTACT US</button></a>
+  </div>
+</div>
+
+<div class="services-section">
+  <div class="row">
+    <div class="head-text">
+      <h2>List of services we offer</h2>
+    </div>
+
+    <div class="col-md-4 mb-4" *ngFor="let service of services">
+      <div class="card h-100 service-card">
+        <img [src]="service.imageUrl" class="card-img-top" alt="{{ service.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ service.title }}</h5>
+          <p class="card-text">{{ service.description }}</p>
+        </div>
+        <div class="card-footer">
+        </div>
       </div>
     </div>
   </div>

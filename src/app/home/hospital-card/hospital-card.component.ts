@@ -18,14 +18,14 @@ export class HospitalCardComponent implements OnInit {
   hospitals: Hospital[] = [
     { id: 1, name: 'Apollo', location: 'Ahmedabad', imageUrl: '../../assets/apolo.jpeg' },
     { id: 2, name: 'Fortis', location: 'Mumbai', imageUrl: '../../assets/hostpital.jpeg' },
-    { id: 3, name: 'AIIMS', location: 'Delhi', imageUrl: '../../assets/hos_1.jpeg' },
+    // { id: 3, name: 'AIIMS', location: 'Delhi', imageUrl: '../../assets/hos_1.jpeg' },
     { id: 4, name: 'Max Healthcare', location: 'Chennai', imageUrl: '../../assets/max.jpeg' },
-    { id: 5, name: 'Medanta', location: 'Gurugram', imageUrl: '../../assets/hostpital.jpeg' },
-    { id: 6, name: 'Narayana Health', location: 'Bangalore', imageUrl: '../../assets/hostpital.jpeg' },
-    { id: 7, name: 'Manipal Hospitals', location: 'Pune', imageUrl: '../../assets/hostpital.jpeg' },
-    { id: 8, name: 'Columbia Asia', location: 'Kolkata', imageUrl: '../../assets/hostpital.jpeg' },
-    { id: 9, name: 'Kokilaben Hospital', location: 'Hyderabad', imageUrl: '../../assets/hostpital.jpeg' },
-    { id: 10, name: 'Artemis Hospital', location: 'Jaipur', imageUrl: '../../assets/hostpital.jpeg' }
+    { id: 5, name: 'Medanta–The Medicity', location: 'Gurugram', imageUrl: '../../assets/medanta.jpg' },
+    { id: 6, name: 'Manipal Hospitals', location: 'Bangalore', imageUrl: '../../assets/manipal.jpeg' },
+    { id: 7, name: 'Fortis Memorial', location: 'Pune', imageUrl: '../../assets/fortis.jpeg' },
+    { id: 8, name: 'Columbia Asia', location: 'Kolkata', imageUrl: '../../assets/colu.jpeg' },
+    { id: 9, name: 'Kokilaben Hospital', location: 'Hyderabad', imageUrl: '../../assets/kokilaben.jpg' },
+    { id: 10, name: 'Artemis Hospital', location: 'Jaipur', imageUrl: '../../assets/artemis.jpg' }
   ];
 
   currentIndex = 0;

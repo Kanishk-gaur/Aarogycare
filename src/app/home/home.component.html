@@ -1,8 +1,19 @@
-<!-- home.component.html -->
-<div class="content-wrapper" [class.blur]="showCircleCard">
-    <app-home-card></app-home-card>
-    <app-hospital-card></app-hospital-card>
-    <div #trigger class="scroll-trigger"></div>
+<div class="home-container" [style.min-height]="viewHeight">
+  <div class="content-wrapper" [class.blur]="showCircleCard">
+    <div class="hero-section" [style.height]="viewHeight">
+      <app-bg></app-bg>
+    </div>
+    
+    <div class="card-section">
+      <app-hospital-card></app-hospital-card>
+      <div #trigger class="scroll-trigger"></div>
+    </div>
   </div>
-  <div *ngIf="isLoading" class="loading-indicator">Loading...</div>
+
+  <!-- <div *ngIf="isLoading" class="loading-indicator">
+    <div class="spinner"></div>
+    <span>Loading...</span>
+  </div> -->
+
   <ng-container #circleCardContainer></ng-container>
+</div>

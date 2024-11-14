@@ -1,62 +1,112 @@
 /* home.component.scss */
 :host {
-    display: block;
-    min-height: 200vh; // Ensure there's enough content to scroll
+  display: block;
+  min-height: 100vh;
+  width: 100%; // Changed from 100vw to 100%
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100%; // Ensure it's 100% not 100vw
+  transition: all 2s ease;
+  margin: 0; // Add this
+  padding: 0; // Add this
+  
+  &.blur {
+    filter: blur(5px);
+    pointer-events: none;
+  }
+}
+
+.scroll-trigger {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  height: 2px; /* Increased for better detection */
+  visibility: hidden;
+  pointer-events: none; /* Ensure it doesn't interfere with scrolling */
+}
+
+.loading-indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000; /* Increased to ensure visibility */
+  transform: translateZ(0); /* Force GPU acceleration */
+}
+
+app-home-card,
+app-hospital-card {
+  display: block;
+  min-height: 100vh;
+  width: 100%; // Changed from any implied width to 100%
+  margin: 0; // Add this
+  padding: 0; // Add this
+  overflow: hidden;
+}
+
+::ng-deep app-circle-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: white;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 2s ease;
+  transform: translateZ(0); /* Force GPU acceleration */
+  
+  &.show {
+    opacity: 1;
+    visibility: visible;
   }
   
-  .content-wrapper {
-    position: relative;
-    z-index: 1;
-    transition: filter 0.5s ease;
-  
-    &.blur {
-      filter: blur(5px);
-    }
+  /* Ensure proper scrolling behavior */
+  &::-webkit-scrollbar {
+    width: 8px;
   }
   
-  .scroll-trigger {
-    position: absolute;
-    bottom: 100px; // Adjust this value to change when the transition triggers
-    left: 0;
-    right: 0;
-    height: 1px;
-    visibility: hidden;
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  :host {
+    min-height: -webkit-fill-available; /* Fix for mobile Safari */
+  }
+  
+  app-home-card,
+  app-hospital-card {
+    min-height: -webkit-fill-available;
   }
   
   .loading-indicator {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 11;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
   }
-  
-  // Ensure your app-home-card and app-hospital-card have some height
-  app-home-card,
-  app-hospital-card {
-    display: block;
-    min-height: 50vh; // Adjust as needed
-  }
-  
-  // Style for the lazy-loaded circle card component
-  ::ng-deep app-circle-card {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    background-color: white; // Adjust as needed
-    overflow-y: auto;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.75s ease, visibility 0.75s ease;
-  
-    &.show {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+}

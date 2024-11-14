@@ -1,26 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
+
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   isSubmitting = false;
   submitMessage = '';
 
   phoneNumbers = [
-    '+1 (555) 123-4567',
-    '+44 20 7123 4567',
-    '+61 2 8123 4567'
+    '+91-9289700931',
+    '+91-9599023663',
   ];
 
   emails = [
-    'info@brand.com',
-    'support@brand.com'
+    'contact@aarogycare.com',
   ];
 
   constructor(private fb: FormBuilder) {
@@ -62,7 +62,7 @@ export class ContactComponent implements OnInit {
 
       try {
         const templateParams = {
-          to_email: '20010418vidhan@gmail.com',
+          to_email: 'contact@aarogycare.com',
           from_name: this.contactForm.value.name,
           from_email: this.contactForm.value.email,
           phone: this.contactForm.value.phone,

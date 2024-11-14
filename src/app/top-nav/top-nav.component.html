@@ -1,7 +1,21 @@
 <!-- top-nav.component.html -->
+<!-- <div *ngIf="isHomeRoute" class="video-background">
+  <video #videoPlayer autoplay muted loop class="video-content">
+    <source src="../../assets/video/output.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay-content">
+    <h1>Quicker, Easier, Smarter Medical and Wellness Travel</h1>
+    <p>Healthtrip streamlines your medical travel experience by offering personalized assistance from start to finish.</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search Doctors, Treatments, Hospitals">
+    </div>
+  </div>
+</div> -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand text-success fw-bold" routerLink="/">brand</a>
+    <a class="navbar-brand text-success fw-bold" routerLink="/">Aarogycare</a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,8 +34,6 @@
     </div>
   </div>
 </nav>
-
-<div *ngIf="isHomeRoute" class="bg-image"></div>
 
 <div class="container" style="margin-top: 76px;">
   <router-outlet></router-outlet>
