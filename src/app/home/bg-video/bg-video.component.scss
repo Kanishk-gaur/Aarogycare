@@ -1,6 +1,22 @@
 /* // dental-banner.component.scss */
+
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .banner-container {
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   background-image: url('./../../../assets/home_p/doc1.jpg');
   background-size: cover;
@@ -24,12 +40,15 @@
   }
 }
 
+
+
 .content-wrapper {
   position: relative;
   z-index: 2;
   text-align: center;
   max-width: 800px;
-  padding: 0 20px;
+  // padding: 0 20px;
+  padding-top: 30vh;
 }
 
 .top-text {
@@ -55,6 +74,7 @@
   margin-bottom: 0.5rem;
   line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: popUp 1s ease-out forwards;
 
   .highlight {
     color: #5be2b8;
@@ -63,11 +83,12 @@
 }
 
 .sub-title {
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #1a1a1a;
   margin-top: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: popUp 1s ease-out forwards;
 }
 
 .cta-section {
@@ -107,6 +128,7 @@
     font-size: 1.4rem;
   }
 }
+
 
 /* // Responsive styles */
 @media (max-width: 768px) {

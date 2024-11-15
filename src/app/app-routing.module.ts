@@ -10,6 +10,10 @@ import { AyurComponent } from './services/ayur/ayur.component';
 import { ServiceCardComponent } from './services/service-card/service-card.component';
 
 const routes: Routes = [
+  
+  
+  // Default route
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   // { path: 'projects', component: AyurvedaComponent },
   { path: 'services', component: ServicesComponent },
@@ -18,9 +22,6 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'ayur', component: AyurComponent },
   { path: 'service-card', component: ServiceCardComponent },
-  
-  // Default route
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   
   // Wildcard route
   { path: '**', redirectTo: 'home' }

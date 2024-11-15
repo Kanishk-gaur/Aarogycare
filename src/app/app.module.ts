@@ -21,7 +21,11 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BgVideoComponent } from './home/bg-video/bg-video.component';
+import { MoreCardComponent } from './services/more-card/more-card.component';
 import { Display1Component } from './about/display-1/display-1.component';
+import { FloatTextComponent } from './home/bg-video/float-text/float-text.component';
+import { SListComponent } from './services/s-list/s-list.component';
+import { ContListComponent } from './services/cont-list/cont-list.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -42,7 +46,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AyurvedaComponent,
     AyurComponent,
     BgVideoComponent,
-    Display1Component
+    Display1Component,
+    MoreCardComponent,
+    FloatTextComponent,
+    SListComponent,
+    ContListComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class BgVideoComponent {
   topText = "INDIA'S #1 MEDICAL SERVICE PROVIDERS";
-  mainTitle = "Welcome to the India's premier healthcare destination offering exceptional medical services";
+  mainTitle = "Welcome to the India's premier healthcare destination offering exceptional medical services with an Ayurvedic touch";
   main2Title = "offering exceptional medical services"
   subTitle = " with an Ayurvedic touch";
   buttonText = "BOOK A FREE CONSULTATION";

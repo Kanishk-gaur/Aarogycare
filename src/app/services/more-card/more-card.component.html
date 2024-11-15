@@ -1,1 +1,10 @@
-<p>more-card works!</p>
+<div class="container">
+    <h2>Comprehensive Care for Every Type of Cancer</h2>
+    <div class="card-grid">
+      <div class="card" *ngFor="let cancer of cancerTypes">
+        <i class="{{ cancer.icon }} card-icon"></i>
+        <p class="card-title">{{ cancer.name }}</p>
+      </div>
+    </div>
+  </div>
+  

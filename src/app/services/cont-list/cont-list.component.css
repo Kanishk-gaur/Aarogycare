@@ -1,0 +1,95 @@
+.contact-card {
+    /* display: flex; */
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-top: 10vh;
+    align-items: center;
+    background-color: #19a42b;
+    border-radius: 12px;
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+  
+    .content {
+      display: flex;
+      align-items: center;
+  
+      .icon-container {
+        background-color: #48b9ff;
+        border-radius: 50%;
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: #fff;
+      }
+  
+      .question-text {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+  
+    .form {
+        margin-top: 18px;
+        margin-bottom: 20px;
+      display: flex;
+      gap: 10rem;
+      /* font-size: 2rem; */
+  
+      .input-name,
+      .input-mobile input {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 0.9rem;
+        width: 60vh;
+      }
+  
+      .input-mobile {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+  
+        .country-code {
+          /* padding: 0.5rem; */
+          background-color: #f2f2f2;
+          color: #555;
+          font-weight: 500;
+        }
+  
+        input {
+            width: 80vh;
+          border: none;
+          outline: none;
+          /* padding: 0.5rem; */
+          font-size: 0.9rem;
+          color: #333;
+        }
+      }
+  
+      .callback-button {
+        background-color: #ff4868;
+        color: #fff;
+        padding: 0.5rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 30vh;
+  
+        &:hover {
+          background-color: #e03e60;
+        }
+      }
+    }
+  }
+  

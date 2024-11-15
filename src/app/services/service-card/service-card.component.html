@@ -15,7 +15,7 @@
       <h2>List of services we offer</h2>
     </div>
 
-    <div class="col-md-4 mb-4" *ngFor="let service of services">
+    <div class="col-md-3 mb-3" *ngFor="let service of services">
       <div class="card h-100 service-card">
         <img [src]="service.imageUrl" class="card-img-top" alt="{{ service.title }}">
         <div class="card-body">
@@ -27,4 +27,7 @@
       </div>
     </div>
   </div>
+  <more-card></more-card>
+  <cont-list></cont-list>
+  <s-list></s-list>
 </div>
