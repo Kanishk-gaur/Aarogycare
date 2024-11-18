@@ -26,6 +26,8 @@ import { Display1Component } from './about/display-1/display-1.component';
 import { FloatTextComponent } from './home/bg-video/float-text/float-text.component';
 import { SListComponent } from './services/s-list/s-list.component';
 import { ContListComponent } from './services/cont-list/cont-list.component';
+import { YtVidComponent } from './about/yt-vid/yt-vid.component';
+import { SafeUrlPipe } from './safe-url.pipe';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -50,7 +52,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     MoreCardComponent,
     FloatTextComponent,
     SListComponent,
-    ContListComponent
+    ContListComponent,
+    YtVidComponent,
+    SafeUrlPipe,
   ],
   imports: [
     BrowserModule,

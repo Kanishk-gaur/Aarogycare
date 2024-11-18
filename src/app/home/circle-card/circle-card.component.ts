@@ -27,7 +27,7 @@ export class CircleCardComponent implements OnInit {
     { icon: '/assets/icons/surgery.png', title: 'Surgery', description: 'Request a quote directly through our website' },
     { icon: '/assets/icons/transplant.png', title: 'Transplant', description: 'Based on your criteria, we recommend the best hospitals or providers' },
     { icon: '/assets/icons/cancer.png', title: 'Cancer Treatement', description: 'The hospital/provider will contact you directly to coordinate your treatment' },
-    { icon: '/assets/icons/dentist.png', title: 'Dental Care', description: 'Finalize your treatment with the hospital/provider of your choice' },
+    { icon: '/assets/icons/ivf.png', title: 'In vitro fertilization (IVF)', description: 'The most popular and approachable IVF destination.' },
   ];
   constructor() {}
 

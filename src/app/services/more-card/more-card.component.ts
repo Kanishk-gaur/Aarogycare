@@ -9,7 +9,7 @@ export class MoreCardComponent {
   cancerTypes = [
     { name: 'Breast Cancer', icon: 'fas fa-ribbon' },
     { name: 'Cervical Cancer', icon: 'fas fa-venus' },
-    { name: 'Stomach Cancer', icon: 'fas fa-stomach' },
+    { name: 'Stomach Cancer', icon: 'fas fa-ribbon' },
     { name: 'Lung Cancer', icon: 'fas fa-lungs' },
     { name: 'Ovarian Cancer', icon: 'fas fa-venus' },
     { name: 'Pancreatic Cancer', icon: 'fas fa-dna' },

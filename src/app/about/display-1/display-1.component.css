@@ -1,43 +1,61 @@
 .info-cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #8dc13a;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
   
-  .card {
-    text-align: center;
-    flex: 1; /* Allow cards to grow equally in width */
-  }
-  
-  .icon-container {
-    width: 60px;
-    height: 60px;
-    border: 2px dashed #2be274;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 10px auto;
-  }
-  
-  .icon-container .icon {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .number {
-    font-size: 24px;
-    font-weight: bold;
-    color: #55c738;
-  }
-  
-  .label {
-    font-size: 14px;
-    color: #000;
-  }
-  
+}
+
+.card {
+  text-align: center;
+  flex: 1;
+  opacity: 1; /* Set initial opacity to 1 */
+  transform: translateY(20px); /* Add initial vertical offset */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-bottom: 3vh;
+  margin-left: 1vh;
+}
+
+.card.ng-enter {
+  opacity: 0; /* Set opacity to 0 on enter */
+  transform: translateY(20px); /* Set initial vertical offset */
+}
+
+.card.ng-enter-active {
+  opacity: 1; /* Animate opacity to 1 */
+  transform: translateY(0); /* Animate vertical offset to 0 */
+}
+
+.icon-container {
+
+  width: 60px;
+  height: 60px;
+  border: 2px dashed #2be274;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px auto;
+  margin-top: 2vh;
+}
+
+.icon-container .icon {
+  width: 40px;
+  height: 40px;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #55c738;
+}
+
+.label {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 2vh;
+}

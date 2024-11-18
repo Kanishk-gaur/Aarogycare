@@ -1,10 +1,13 @@
 <div class="container">
-    <h2>Comprehensive Care for Every Type of Cancer</h2>
-    <div class="card-grid">
-      <div class="card" *ngFor="let cancer of cancerTypes">
-        <i class="{{ cancer.icon }} card-icon"></i>
-        <p class="card-title">{{ cancer.name }}</p>
+  <h2 class="mb-4">Comprehensive Care for Every Type of Cancer</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+    <div class="col" *ngFor="let cancer of cancerTypes">
+      <div class="card h-100 text-center">
+        <div class="card-body d-flex flex-column justify-content-center">
+          <i class="{{ cancer.icon }} card-icon fs-3"></i>
+          <p class="card-title mb-0 mt-3">{{ cancer.name }}</p>
+        </div>
       </div>
     </div>
   </div>
-  
+</div>
