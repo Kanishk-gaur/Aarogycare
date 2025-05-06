@@ -1,18 +1,17 @@
 <div class="container">
-    <h2>Our Services Cover Every Need</h2>
-    <p class="description">
-      You will be assisted by a dedicated case manager from our team. List of services you can expect from us, for FREE!
-    </p>
-    <div class="card-grid">
-      <div class="card" *ngFor="let service of services">
-        <div class="icon-container">
-          <i class="{{ service.icon }}"></i>
-        </div>
-        <div class="text-container">
-          <h3 class="card-title">{{ service.title }}</h3>
-          <p class="card-description">{{ service.description }}</p>
-        </div>
+  <h2>Наши услуги покрывают все потребности</h2>
+  <p class="description">
+    Вам будет назначен персональный менеджер по делу из нашей команды. Список услуг, которые вы можете ожидать от нас, БЕСПЛАТНО!
+  </p>
+  <div class="card-grid">
+    <div class="card" *ngFor="let service of services">
+      <div class="icon-container">
+        <i class="{{ service.icon }}"></i>
+      </div>
+      <div class="text-container">
+        <h3 class="card-title">{{ service.title }}</h3>
+        <p class="card-description">{{ service.description }}</p>
       </div>
     </div>
   </div>
-  
+</div>

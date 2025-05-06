@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -16,16 +15,16 @@ interface Hospital {
 })
 export class HospitalCardComponent implements OnInit {
   hospitals: Hospital[] = [
-    { id: 1, name: 'Apollo', location: 'Ahmedabad', imageUrl: '../../assets/apolo.jpeg' },
-    { id: 2, name: 'Fortis', location: 'Mumbai', imageUrl: '../../assets/hostpital.jpeg' },
-    // { id: 3, name: 'AIIMS', location: 'Delhi', imageUrl: '../../assets/hos_1.jpeg' },
-    { id: 4, name: 'Max Healthcare', location: 'Chennai', imageUrl: '../../assets/max.jpeg' },
-    { id: 5, name: 'Medanta–The Medicity', location: 'Gurugram', imageUrl: '../../assets/medanta.jpg' },
-    { id: 6, name: 'Manipal Hospitals', location: 'Bangalore', imageUrl: '../../assets/manipal.jpeg' },
-    { id: 7, name: 'Fortis Memorial', location: 'Pune', imageUrl: '../../assets/fortis.jpeg' },
-    { id: 8, name: 'Columbia Asia', location: 'Kolkata', imageUrl: '../../assets/colu.jpeg' },
-    { id: 9, name: 'Kokilaben Hospital', location: 'Hyderabad', imageUrl: '../../assets/kokilaben.jpg' },
-    { id: 10, name: 'Artemis Hospital', location: 'Jaipur', imageUrl: '../../assets/artemis.jpg' }
+    { id: 1, name: 'Аполло', location: 'Ахмедабад', imageUrl: '../../assets/apolo.jpeg' },
+    { id: 2, name: 'Фортис', location: 'Мумбаи', imageUrl: '../../assets/hostpital.jpeg' },
+    // { id: 3, name: 'AIIMS', location: 'Дели', imageUrl: '../../assets/hos_1.jpeg' },
+    { id: 4, name: 'Макс Хелскеа', location: 'Ченнаи', imageUrl: '../../assets/max.jpeg' },
+    { id: 5, name: 'Меданта – Медисити', location: 'Гургаон', imageUrl: '../../assets/medanta.jpg' },
+    { id: 6, name: 'Госпитали Манипал', location: 'Бангалор', imageUrl: '../../assets/manipal.jpeg' },
+    { id: 7, name: 'Фортис Мемориал', location: 'Пуна', imageUrl: '../../assets/fortis.jpeg' },
+    { id: 8, name: 'Колумбия Азия', location: 'Калькутта', imageUrl: '../../assets/colu.jpeg' },
+    { id: 9, name: 'Кокилабен Госпиталь', location: 'Хайдарабад', imageUrl: '../../assets/kokilaben.jpg' },
+    { id: 10, name: 'Артемис Госпиталь', location: 'Джайпур', imageUrl: '../../assets/artemis.jpg' }
   ];
 
   currentIndex = 0;
@@ -52,7 +51,6 @@ export class HospitalCardComponent implements OnInit {
     window.addEventListener('resize', () => this.updateItemsPerPage());
   }
 
- 
   updateItemsPerPage() {
     if (window.innerWidth < 768) {
       this.itemsPerPage = 1;
@@ -71,13 +69,13 @@ export class HospitalCardComponent implements OnInit {
   }
 
   next() {
-    if (this.currentIndex + this.itemsPerPage < this.hospitals.length) {
+    if (this.canGoNext()) {
       this.currentIndex += this.itemsPerPage;
     }
   }
 
   previous() {
-    if (this.currentIndex > 0) {
+    if (this.canGoPrevious()) {
       this.currentIndex -= this.itemsPerPage;
     }
   }

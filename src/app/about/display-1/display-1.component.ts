@@ -23,22 +23,22 @@ export class Display1Component {
     {
       icon: 'https://img.icons8.com/ios-filled/50/8a2be2/hospital.png',
       number: 25,
-      label: 'HOSPITALS'
+      label: 'БОЛЬНИЦЫ'
     },
     {
       icon: 'https://img.icons8.com/ios-filled/50/8a2be2/doctor-male.png',
       number: 250,
-      label: 'DOCTORS'
+      label: 'ВРАЧИ'
     },
     {
       icon: 'https://img.icons8.com/ios-filled/50/8a2be2/stethoscope.png',
       number: 30,
-      label: 'MEDICAL SPECIALISTS'
+      label: 'МЕДИЦИНСКИЕ СПЕЦИАЛИСТЫ'
     },
     {
       icon: 'https://img.icons8.com/ios-filled/50/8a2be2/surgery.png',
       number: 2000,
-      label: 'SURGERIES'
+      label: 'ХИРУРГИЧЕСКИЕ ОПЕРАЦИИ'
     }
   ];
 }

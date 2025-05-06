@@ -1,4 +1,3 @@
-// circle-card.component.ts
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
@@ -23,12 +22,13 @@ export class CircleCardComponent implements OnInit {
   @HostBinding('class.show') show = false;
 
   steps = [
-    { icon: '/assets/icons/checkup.png', title: 'Checkups', description: 'Find and research top hospitals & destinations' },
-    { icon: '/assets/icons/surgery.png', title: 'Surgery', description: 'Request a quote directly through our website' },
-    { icon: '/assets/icons/transplant.png', title: 'Transplant', description: 'Based on your criteria, we recommend the best hospitals or providers' },
-    { icon: '/assets/icons/cancer.png', title: 'Cancer Treatement', description: 'The hospital/provider will contact you directly to coordinate your treatment' },
-    { icon: '/assets/icons/ivf.png', title: 'In vitro fertilization (IVF)', description: 'The most popular and approachable IVF destination.' },
+    { icon: '/assets/icons/checkup.png', title: 'Обследования', description: 'Найдите и изучите лучшие больницы и направления' },
+    { icon: '/assets/icons/surgery.png', title: 'Хирургия', description: 'Запросите цену напрямую через наш сайт' },
+    { icon: '/assets/icons/transplant.png', title: 'Трансплантация', description: 'Мы рекомендуем лучшие клиники по вашим критериям' },
+    { icon: '/assets/icons/cancer.png', title: 'Лечение рака', description: 'Клиника/врач свяжется с вами для организации лечения' },
+    { icon: '/assets/icons/ivf.png', title: 'ЭКО (IVF)', description: 'Самое популярное и доступное направление для ЭКО' },
   ];
+
   constructor() {}
 
   ngOnInit(): void {

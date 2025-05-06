@@ -7,15 +7,14 @@ import { Component } from '@angular/core';
 })
 export class SListComponent {
   services = [
-    { title: 'Medical Opinion and Cost Estimations', description: 'Expert opinions and cost estimates.', icon: 'fas fa-notes-medical' },
-    { title: 'Pre-Travel Consultations', description: 'Understand your procedure before traveling.', icon: 'fas fa-comments' },
-    { title: 'Visa Assistance', description: 'Complete medical visa assistance.', icon: 'fas fa-passport' },
-    { title: 'Money Exchange', description: 'Convenient currency exchange services in your city.', icon: 'fas fa-exchange-alt' },
-    { title: 'Interpreters and Translators', description: 'Fluent professionals to break language barriers at every step.', icon: 'fas fa-language' },
-    { title: 'Transportation Assistance', description: 'Complimentary airport transfers.', icon: 'fas fa-ambulance' },
-    { title: 'Accommodation Options', description: 'Near the hospital and matching your budget and needs.', icon: 'fas fa-hotel' },
-    { title: 'Admission, Appointment, Pharma Care', description: 'Full coordination of medical logistics.', icon: 'fas fa-calendar-check' },
-    // { title: 'Private Duty Nursing', description: 'Arrangements of private nursing care as needed.', icon: 'fas fa-user-nurse' },
+    { title: 'Медицинские консультации и оценка стоимости', description: 'Экспертные мнения и оценки стоимости.', icon: 'fas fa-notes-medical' },
+    { title: 'Консультации перед поездкой', description: 'Понимание процедуры до поездки.', icon: 'fas fa-comments' },
+    { title: 'Помощь с визой', description: 'Полная помощь в оформлении медицинской визы.', icon: 'fas fa-passport' },
+    { title: 'Обмен валюты', description: 'Удобные услуги обмена валюты в вашем городе.', icon: 'fas fa-exchange-alt' },
+    { title: 'Переводчики и интерпретаторы', description: 'Профессионалы, которые помогут преодолеть языковые барьеры на каждом этапе.', icon: 'fas fa-language' },
+    { title: 'Транспортная помощь', description: 'Бесплатные трансферы из аэропорта.', icon: 'fas fa-ambulance' },
+    { title: 'Варианты проживания', description: 'Рядом с больницей, соответствующие вашему бюджету и потребностям.', icon: 'fas fa-hotel' },
+    { title: 'Приём, запись на приём, фармацевтическая помощь', description: 'Полная координация медицинской логистики.', icon: 'fas fa-calendar-check' },
+    // { title: 'Частные медсестры', description: 'Организация частного ухода по мере необходимости.', icon: 'fas fa-user-nurse' },
   ];
-
 }

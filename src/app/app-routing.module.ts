@@ -9,7 +9,7 @@ import { AyurComponent } from './services/ayur/ayur.component';
 import { ServiceCardComponent } from './services/service-card/service-card.component';
 
 const routes: Routes = [
-  // Default route
+  // Основной маршрут
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'services', component: ServicesComponent },
@@ -18,15 +18,15 @@ const routes: Routes = [
   { path: 'ayur', component: AyurComponent },
   { path: 'service-card', component: ServiceCardComponent },
   
-  // Wildcard route
+  // Маршрут для несуществующих путей
   { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { 
-      scrollPositionRestoration: 'top', // This ensures the page always scrolls to the top
-      anchorScrolling: 'enabled' // This enables scrolling to anchored elements if any
+      scrollPositionRestoration: 'top', // Это гарантирует, что страница всегда будет прокручиваться до верха
+      anchorScrolling: 'enabled' // Это позволяет прокручивать до закрепленных элементов, если они есть
     })
   ],
   exports: [RouterModule]

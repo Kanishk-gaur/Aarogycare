@@ -6,19 +6,19 @@
     </video>
   </div> -->
 
-  <h2>Contact Us</h2>
+  <h2>Свяжитесь с нами</h2>
 
   <!-- Contact information section -->
   <div class="contact-info">
     <div class="phone-numbers">
-      <h3>Phone Numbers:</h3>
+      <h3>Телефонные номера:</h3>
       <ul>
         <li *ngFor="let number of phoneNumbers">{{ number }}</li>
       </ul>
     </div>
     
     <div class="emails">
-      <h3>Email Addresses:</h3>
+      <h3>Адреса электронной почты:</h3>
       <ul>
         <li *ngFor="let email of emails">{{ email }}</li>
       </ul>
@@ -30,65 +30,65 @@
     
     <!-- Left side: Contact image -->
     <div class="contact-image">
-      <img src="./../../assets/service_1.png" alt="Contact Us" />
+      <img src="./../../assets/service_1.png" alt="Свяжитесь с нами" />
     </div>
 
     <!-- Right side: Contact form section -->
     <div class="contact-form">
-      <h3>Contact Form</h3>
+      <h3>Форма обратной связи</h3>
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <label for="name">Name:</label>
+          <label for="name">Имя:</label>
           <input type="text" id="name" formControlName="name" required>
           <div class="error-message" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors">
-            <span *ngIf="contactForm.get('name')?.errors?.['required']">Name is required</span>
-            <span *ngIf="contactForm.get('name')?.errors?.['minlength']">Name must be at least 2 characters</span>
+            <span *ngIf="contactForm.get('name')?.errors?.['required']">Имя обязательно</span>
+            <span *ngIf="contactForm.get('name')?.errors?.['minlength']">Имя должно содержать не менее 2 символов</span>
           </div>
         </div>
         
         <div class="form-group">
-          <label for="address">Address:</label>
+          <label for="address">Адрес:</label>
           <input type="text" id="address" formControlName="address" required>
           <div class="error-message" *ngIf="contactForm.get('address')?.touched && contactForm.get('address')?.errors">
-            <span *ngIf="contactForm.get('address')?.errors?.['required']">Address is required</span>
-            <span *ngIf="contactForm.get('address')?.errors?.['minlength']">Address must be at least 5 characters</span>
+            <span *ngIf="contactForm.get('address')?.errors?.['required']">Адрес обязателен</span>
+            <span *ngIf="contactForm.get('address')?.errors?.['minlength']">Адрес должен содержать не менее 5 символов</span>
           </div>
         </div>
         
         <div class="form-group">
-          <label for="phone">Phone:</label>
+          <label for="phone">Телефон:</label>
           <input type="tel" id="phone" formControlName="phone" required>
           <div class="error-message" *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors">
-            <span *ngIf="contactForm.get('phone')?.errors?.['required']">Phone is required</span>
-            <span *ngIf="contactForm.get('phone')?.errors?.['pattern']">Please enter a valid phone number</span>
+            <span *ngIf="contactForm.get('phone')?.errors?.['required']">Телефон обязателен</span>
+            <span *ngIf="contactForm.get('phone')?.errors?.['pattern']">Введите действительный номер телефона</span>
           </div>
         </div>
         
         <div class="form-group">
-          <label for="email">Email:</label>
+          <label for="email">Электронная почта:</label>
           <input type="email" id="email" formControlName="email" required>
           <div class="error-message" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors">
-            <span *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</span>
-            <span *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email address</span>
+            <span *ngIf="contactForm.get('email')?.errors?.['required']">Электронная почта обязательна</span>
+            <span *ngIf="contactForm.get('email')?.errors?.['email']">Введите корректный адрес электронной почты</span>
           </div>
         </div>
         
         <div class="form-group">
-          <label for="message">Message:</label>
+          <label for="message">Сообщение:</label>
           <textarea id="message" formControlName="message" required></textarea>
           <div class="error-message" *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors">
-            <span *ngIf="contactForm.get('message')?.errors?.['required']">Message is required</span>
-            <span *ngIf="contactForm.get('message')?.errors?.['minlength']">Message must be at least 10 characters</span>
+            <span *ngIf="contactForm.get('message')?.errors?.['required']">Сообщение обязательно</span>
+            <span *ngIf="contactForm.get('message')?.errors?.['minlength']">Сообщение должно содержать не менее 10 символов</span>
           </div>
         </div>
         
         <button type="submit" [disabled]="contactForm.invalid || isSubmitting">
-          {{ isSubmitting ? 'Sending...' : 'Submit' }}
+          {{ isSubmitting ? 'Отправка...' : 'Отправить' }}
         </button>
   
         <div class="submit-message" *ngIf="submitMessage" 
-             [class.success]="submitMessage.includes('successfully')"
-             [class.error]="submitMessage.includes('Failed')">
+             [class.success]="submitMessage.includes('успешно')"
+             [class.error]="submitMessage.includes('Ошибка')">
           {{ submitMessage }}
         </div>
       </form>

@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./bg-video.component.scss']
 })
 export class BgVideoComponent {
-  topText = "INDIA'S #1 MEDICAL SERVICE PROVIDERS";
-  mainTitle = "Welcome to the India's premier healthcare destination offering exceptional medical services with an Ayurvedic touch";
-  main2Title = "offering exceptional medical services"
-  subTitle = " with an Ayurvedic touch";
-  buttonText = "BOOK A FREE CONSULTATION";
-
+  topText = "№1 СЕРВИС МЕДИЦИНСКИХ УСЛУГ В ИНДИИ";
+  mainTitle = "Добро пожаловать в ведущий медицинский центр Индии, предлагающий исключительные услуги с аюрведическим подходом";
+  main2Title = "предоставляя исключительные медицинские услуги";
+  subTitle = " с аюрведическим подходом";
+  buttonText = "ЗАПИСАТЬСЯ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ";
 }

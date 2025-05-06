@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/co
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
-declare var bootstrap: any; // Declare bootstrap as any type
+declare var bootstrap: any; // Объявить bootstrap как тип any
 
 @Component({
   selector: 'app-top-nav',
@@ -11,10 +11,10 @@ declare var bootstrap: any; // Declare bootstrap as any type
 })
 export class TopNavComponent implements OnInit, OnDestroy {
   navItems = [
-    { path: 'home', label: 'Home' },
-    { path: 'service-card', label: 'Services' },
-    { path: 'about', label: 'About' },
-    { path: 'contact', label: 'Contact' }
+    { path: 'home', label: 'Главная' },
+    { path: 'service-card', label: 'Услуги' },
+    { path: 'about', label: 'О нас' },
+    { path: 'contact', label: 'Контакты' }
   ];
 
   activeLink: string = 'home';
@@ -35,10 +35,10 @@ export class TopNavComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    // Initialize Bootstrap collapse after a short delay to ensure DOM is ready
+    // Инициализация Bootstrap collapse после небольшой задержки для готовности DOM
     this.initializeBootstrapCollapse();
 
-    // Handle back button
+    // Обработка кнопки "назад"
     window.addEventListener('popstate', () => {
       this.closeMenu();
     });
@@ -78,14 +78,14 @@ export class TopNavComponent implements OnInit, OnDestroy {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               this.videoPlayer.nativeElement.play().catch((error: Error) => {
-                console.warn('Autoplay was prevented:', error.message);
+                console.warn('Автозапуск был предотвращен:', error.message);
               });
             } else {
               this.videoPlayer.nativeElement.pause();
             }
           });
         },
-        { threshold: 0.5 } // Play the video when at least 50% of it is visible
+        { threshold: 0.5 } // Воспроизведение видео, когда хотя бы 50% его видны
       );
       this.intersectionObserver.observe(this.videoPlayer.nativeElement);
     }

@@ -7,13 +7,12 @@ import { Component } from '@angular/core';
 })
 export class MoreCardComponent {
   cancerTypes = [
-    { name: 'Breast Cancer', icon: 'fas fa-ribbon' },
-    { name: 'Cervical Cancer', icon: 'fas fa-venus' },
-    { name: 'Stomach Cancer', icon: 'fas fa-ribbon' },
-    { name: 'Lung Cancer', icon: 'fas fa-lungs' },
-    { name: 'Ovarian Cancer', icon: 'fas fa-venus' },
-    { name: 'Pancreatic Cancer', icon: 'fas fa-dna' },
-    { name: 'Rectal Cancer', icon: 'fas fa-procedures' },
+    { name: 'Рак груди', icon: 'fas fa-ribbon' },
+    { name: 'Рак шейки матки', icon: 'fas fa-venus' },
+    { name: 'Рак желудка', icon: 'fas fa-ribbon' },
+    { name: 'Рак лёгких', icon: 'fas fa-lungs' },
+    { name: 'Рак яичников', icon: 'fas fa-venus' },
+    { name: 'Рак поджелудочной железы', icon: 'fas fa-dna' },
+    { name: 'Рак прямой кишки', icon: 'fas fa-procedures' },
   ];
-
 }

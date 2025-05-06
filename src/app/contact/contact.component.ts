@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
-// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   isSubmitting = false;
@@ -35,15 +33,15 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     emailjs.init("FEPr0AJzXy6lAR_X5");
-    
-    // Debug form state
+
+    // Отладка состояния формы
     this.contactForm.statusChanges.subscribe(status => {
-      console.log('Form Status:', status);
-      console.log('Form Errors:', this.getFormValidationErrors());
+      console.log('Статус формы:', status);
+      console.log('Ошибки формы:', this.getFormValidationErrors());
     });
   }
 
-  // Helper method to debug form validation errors
+  // Вспомогательный метод для вывода ошибок валидации формы
   getFormValidationErrors() {
     const errors: any = {};
     Object.keys(this.contactForm.controls).forEach(key => {
@@ -76,16 +74,16 @@ export class ContactComponent implements OnInit {
           templateParams
         );
 
-        this.submitMessage = 'Message sent successfully!';
+        this.submitMessage = 'Сообщение успешно отправлено!';
         this.contactForm.reset();
       } catch (error) {
-        console.error('Error sending email:', error);
-        this.submitMessage = 'Failed to send message. Please try again later.';
+        console.error('Ошибка отправки сообщения:', error);
+        this.submitMessage = 'Не удалось отправить сообщение. Пожалуйста, попробуйте позже.';
       } finally {
         this.isSubmitting = false;
       }
     } else {
-      // Mark all fields as touched to trigger validation messages
+      // Отметить все поля как «затронутые», чтобы показать сообщения об ошибках
       Object.keys(this.contactForm.controls).forEach(key => {
         const control = this.contactForm.get(key);
         control?.markAsTouched();

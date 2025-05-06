@@ -8,107 +8,101 @@ import { Component, Input } from '@angular/core';
 export class ServiceCardComponent {
   services = [
     {
-      title: 'ONCOLOGY',
-      description: 'Advanced cancer treatments with proven results.',
+      title: 'ОНКОЛОГИЯ',
+      description: 'Продвинутые методы лечения рака с доказанными результатами.',
       imageUrl: 'assets/moder_ser/cancer.jpeg',
       price: '$150,000'
     },
     {
-      title: 'Liver Transplant',
-      description: 'World-class liver transplant services with minimal recovery time.',
+      title: 'Трансплантация печени',
+      description: 'Услуги трансплантации печени мирового уровня с минимальным временем восстановления.',
       imageUrl: 'assets/moder_ser/liver-Photoroom.jpg',
       price: '$180,000'
     },
 
     {
-      title: 'KIDNEY TRANSPLANT',
-      description: 'Expert renal care and transplants.',
+      title: 'Трансплантация почки',
+      description: 'Экспертное лечение почек и трансплантация.',
       imageUrl: 'assets/moder_ser/kidney.png',
       price: '$150,000'
     },
     {
-      title: 'CARDIOLOGY',
-      description: 'World-class heart care for adults and children.',
+      title: 'КАРДИОЛОГИЯ',
+      description: 'Мировой уровень сердечно-сосудистого ухода для взрослых и детей.',
       imageUrl: 'assets/moder_ser/heart-Photoroom.jpg',
       price: '$150,000'
-    }
-    ,
+    },
     {
-      title: 'NEUROSURGERY',
-      description: 'The specialty of neurosurgical care includes both adult and pediatric patients.',
+      title: 'НЕЙРОХИРУРГИЯ',
+      description: 'Специализация в области нейрохирургической помощи как для взрослых, так и для детей.',
       imageUrl: 'assets/moder_ser/neuro.jpeg',
       price: '$180,000'
     },
     {
-      title: 'Hair Transplant',
-      description: 'Restore your hairline with natural-looking hair transplants.',
+      title: 'Трансплантация волос',
+      description: 'Восстановите линию волос с помощью натуральных пересадок.',
       imageUrl: 'assets/service_img/hair_t.jpg',
       price: '$3,000'
-    }
-    ,
-    
+    },
     {
-      title: 'Dental Implants',
-      description: 'Get the perfect smile with our advanced dental implants.',
+      title: 'Дентальные имплантаты',
+      description: 'Получите идеальную улыбку с нашими передовыми дентальными имплантами.',
       imageUrl: 'assets/moder_ser/dent-Photoroom.jpg',
       price: '$1,200'
     },
     {
-      title: 'Cosmetic Surgery',
-      description: 'Enhance your appearance with expert cosmetic surgery.',
+      title: 'Косметическая хирургия',
+      description: 'Улучшите свою внешность с помощью экспертов в области косметической хирургии.',
       imageUrl: 'assets/moder_ser/cosm-Photoroom.jpg',
       price: '$2,500'
     },
     {
-      title: 'Knee Replacement',
-      description: 'Regain mobility with our effective knee replacement surgeries.',
+      title: 'Замена коленного сустава',
+      description: 'Верните подвижность с помощью эффективных операций по замене коленного сустава.',
       imageUrl: 'assets/moder_ser/knee-Photoroom.jpg',
       price: '$7,000'
     },
     {
-      title: 'Eye Surgery (LASIK)',
-      description: 'Get crystal-clear vision with our advanced LASIK procedures.',
+      title: 'Операция на глазах (LASIK)',
+      description: 'Получите кристально чистое зрение с помощью передовых процедур LASIK.',
       imageUrl: 'assets/moder_ser/eye-Photoroom.jpg',
       price: '$2,000'
     },
     {
-      title: 'Breast Augmentation',
-      description: 'Achieve your desired look with breast augmentation surgery.',
+      title: 'Увеличение груди',
+      description: 'Достигните желаемого внешнего вида с помощью операции по увеличению груди.',
       imageUrl: 'assets/moder_ser/brest-Photoroom.jpg',
       price: '$5,000'
     },
     {
-      title: 'Spine Surgery',
-      description: 'Precision spine surgeries for better mobility.',
+      title: 'Операция на позвоночнике',
+      description: 'Точные операции на позвоночнике для улучшения подвижности.',
       imageUrl: 'assets/moder_ser/spine.jpeg',
       price: '$5,000'
     },
     {
-      title: 'IVF',
-      description: 'Leading fertility treatments with high success.',
+      title: 'ЭКО',
+      description: 'Лучшие методы лечения бесплодия с высоким уровнем успеха.',
       imageUrl: 'assets/moder_ser/ivf.jpeg',
       price: '$5,000'
-    }
-    ,
+    },
     {
-      title: 'Bone Marrow',
-      description: 'Bone marrow transplant options for matched and non matched donors.',
+      title: 'Пересадка костного мозга',
+      description: 'Варианты пересадки костного мозга для подходящих и неподходящих доноров.',
       imageUrl: 'assets/moder_ser/bone.jpg',
       price: '$5,000'
     },
     {
-      title: 'Gynecology',
-      description: 'Specialized Women health services.',
+      title: 'Гинекология',
+      description: 'Специализированные услуги в области женского здоровья.',
       imageUrl: 'assets/moder_ser/gync.jpeg',
       price: '$5,000'
     },
     {
-      title: 'Weight Loss',
-      description: 'Effective bariatric surgery options.',
+      title: 'Потеря веса',
+      description: 'Эффективные варианты бариатрической хирургии.',
       imageUrl: 'assets/moder_ser/weight.jpeg',
       price: '$5,000'
     }
   ];
-  
-  
 }
