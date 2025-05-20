@@ -15,16 +15,11 @@ interface Hospital {
 })
 export class HospitalCardComponent implements OnInit {
   hospitals: Hospital[] = [
-    { id: 1, name: 'Аполло', location: 'Ахмедабад', imageUrl: '../../assets/apolo.jpeg' },
-    { id: 2, name: 'Фортис', location: 'Мумбаи', imageUrl: '../../assets/hostpital.jpeg' },
-    // { id: 3, name: 'AIIMS', location: 'Дели', imageUrl: '../../assets/hos_1.jpeg' },
+    { id: 1, name: 'Аполло', location: 'Ахмедабад', imageUrl: '../../assets/Apoolo.jpg' },
+    { id: 2, name: 'Фортис', location: 'Мумбаи', imageUrl: '../../assets/Forties2.jpg' },
     { id: 4, name: 'Макс Хелскеа', location: 'Ченнаи', imageUrl: '../../assets/max.jpeg' },
-    { id: 5, name: 'Меданта – Медисити', location: 'Гургаон', imageUrl: '../../assets/medanta.jpg' },
-    { id: 6, name: 'Госпитали Манипал', location: 'Бангалор', imageUrl: '../../assets/manipal.jpeg' },
-    { id: 7, name: 'Фортис Мемориал', location: 'Пуна', imageUrl: '../../assets/fortis.jpeg' },
-    { id: 8, name: 'Колумбия Азия', location: 'Калькутта', imageUrl: '../../assets/colu.jpeg' },
-    { id: 9, name: 'Кокилабен Госпиталь', location: 'Хайдарабад', imageUrl: '../../assets/kokilaben.jpg' },
-    { id: 10, name: 'Артемис Госпиталь', location: 'Джайпур', imageUrl: '../../assets/artemis.jpg' }
+    { id: 5, name: 'Меданта – Медисити', location: 'Гургаон', imageUrl: '../../assets/Medanta2.jpg' },
+    { id: 6, name: 'Госпитали Манипал', location: 'Бангалор', imageUrl: '../../assets/manipal.jpeg' },    
   ];
 
   currentIndex = 0;
