@@ -3,7 +3,7 @@
   padding: 2rem;
   background-color: #f0f4ff;
 
-  h2 {
+  :is(h2) {
     color: #2a3b9e;
     font-size: 1.8rem;
   }
